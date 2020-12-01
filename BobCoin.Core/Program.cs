@@ -38,7 +38,7 @@ namespace BobCoin.Core
                 Fee = 0.0001
             };
 
-            //create list of transactions
+            //Create list of transactions
             var lsTrx = new List<Transaction>
             {
                 trx1,
@@ -59,7 +59,7 @@ namespace BobCoin.Core
             //Print all blocks
             bc.PrintBlocks();
 
-            //check balance for each account account
+            //Check balance for each account account
             var balance = bc.GetBalance("Genesis Account");
             Console.WriteLine("Genesis Account balance: {0}", balance);
 

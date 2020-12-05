@@ -59,19 +59,27 @@ namespace BobCoin.Core
             //Print all blocks
             bc.PrintBlocks();
 
-            //Check balance for each account account
-            var balance = bc.GetBalance("Genesis Account");
-            Console.WriteLine("Genesis Account balance: {0}", balance);
+            try
+            {
+                //Check balance for each account account
+                var balance = bc.GetBalance("Genesis Account");
+                Console.WriteLine("Genesis Account balance: {0}", balance);
 
-            balance = bc.GetBalance("Ricardo");
-            Console.WriteLine("Ricardo balance: {0}", balance);
+                balance = bc.GetBalance("Ricardo");
+                Console.WriteLine("Ricardo balance: {0}", balance);
 
-            balance = bc.GetBalance("Frodo");
-            Console.WriteLine("Frodo  balance: {0}", balance);
+                balance = bc.GetBalance("Frodo");
+                Console.WriteLine("Frodo  balance: {0}", balance);
 
 
-            balance = bc.GetBalance("Madona");
-            Console.WriteLine("Madona balance: {0}", balance);
+                balance = bc.GetBalance("Madona");
+                Console.WriteLine("Madona balance: {0}", balance);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error has occurred: {ex.Message}");
+            }
+
 
             Console.ReadKey();
         }

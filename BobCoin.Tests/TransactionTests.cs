@@ -19,15 +19,18 @@ namespace BobCoin.Tests
         {
             var trx = new Transaction
             {
-                Sender = "Jhon",
-                Recipient = "Wati",
+                Sender = "Kiran",
+                Recipient = "Bobbi",
                 Amount = 90,
                 Fee = 0.0001
             };
 
-            Assert.That("Wati", Is.EqualTo(trx.Recipient));
-            Assert.That("Jhon", Is.EqualTo(trx.Sender));
-            Assert.That(90,Is.EqualTo(trx.Amount));
+            Assert.Multiple(() =>
+            {
+                Assert.That("Bobbi", Is.EqualTo(trx.Recipient));
+                Assert.That("Kiran", Is.EqualTo(trx.Sender));
+                Assert.That(90, Is.EqualTo(trx.Amount));
+            });
         }
 
         [Test]
@@ -39,7 +42,7 @@ namespace BobCoin.Tests
             //Create first transaction
             var trx1 = new Transaction
             {
-                Sender = "Johana",
+                Sender = "Wizard",
                 Recipient = "Merlin",
                 Amount = 3.0,
                 Fee = 0.3
@@ -48,8 +51,8 @@ namespace BobCoin.Tests
             //Create 2nd transaction
             var trx2 = new Transaction
             {
-                Sender = "Budiawan",
-                Recipient = "Norita",
+                Sender = "Jefff",
+                Recipient = "Hefe",
                 Amount = 2.5,
                 Fee = 0.2
             };
@@ -57,8 +60,8 @@ namespace BobCoin.Tests
             //Create 3nd transaction
             var trx3 = new Transaction
             {
-                Sender = "Palentino",
-                Recipient = "Stepano",
+                Sender = "David",
+                Recipient = "Beckham",
                 Amount = 1.5,
                 Fee = 0.02
             };
